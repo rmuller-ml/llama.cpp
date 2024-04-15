@@ -1794,8 +1794,8 @@ class NomicBertModel(BertModel):
 
 class GemmaModel(Model):
     def set_vocab(self):
-        self._set_vocab_sentencepiece()
-
+        #self._set_vocab_sentencepiece()
+        self._set_vocab_hf()
     def set_gguf_parameters(self):
         hparams = self.hparams
         block_count = hparams["num_hidden_layers"]
